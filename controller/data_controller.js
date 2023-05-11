@@ -6,6 +6,7 @@ const getData = async (req, res) => {
   try {
     const data = await Field.find({ name: dataName });
     if (data) {
+      console.log(data);
       res.json(data);
     } else {
       res.status(404).json({ message: "Crypto data not found" });
