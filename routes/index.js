@@ -5,7 +5,7 @@ console.log("Router loaded");
 
 router.get("/", async (req, res) => {
   res.render("index", {
-    title: "Crypto App",
+    title: "HodlInfo",
   });
 });
 

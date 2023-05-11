@@ -1,3 +1,20 @@
-body {
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
   background-color: rgb(25, 29, 40);
+}
+#company {
+  color: rgb(61, 198, 193);
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+#company1 {
+  font-weight: 300px;
+  padding: 15px;
+  margin-top: 10px;
+  font-stretch: extra-expanded;
+  letter-spacing: 1px;
 }
