@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title><%= locals.title %></title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -13,10 +13,9 @@
         <h1 class="text-3xl font-bold underline" id="company1">HODLINFO</h1>
       </a>
       <div style="margin-top: 100px">
-        <h1 id="company2">Bitcoin Price</h1>
-        <button>inr</button>
+        <button class="bigBtn">inr</button>
         <div class="dropdown">
-          <button class="dropbtn">crypto</button>
+          <button class="dropbtn bigBtn">crypto</button>
           <div class="dropdown-content">
             <a onclick="showTicker('btcinr')">btc</a>
             <a onclick="showTicker('xrpinr')">xrp</a>
@@ -29,16 +28,15 @@
             <a onclick="showTicker('reqinr')">req</a>
             <a onclick="showTicker('nulsinr')">nuls</a>
           </div>
+          <a
+            href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn"
+          >
+            <button class="bigBtn">BUY</button>
+          </a>
         </div>
         <div class="row" id="tickerRow"></div>
-        <a
-          href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn"
-        >
-          <button>BUY <%= locals.title %></button>
-        </a>
       </div>
     </div>
-
     <script src="/js/fetch.js"></script>
   </body>
 </html>

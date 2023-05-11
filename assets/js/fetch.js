@@ -1,4 +1,4 @@
-function showTicker(tickerName) {
+function showTicker(tickerName = "btcinr") {
   // Make a request to fetch the ticker data based on the clicked button
   console.log("Inside showTicker");
   console.log(`https://api.wazirx.com/api/v2/tickers/${tickerName}`);
@@ -27,7 +27,9 @@ function showTicker(tickerName) {
       
         <div class="column">
           <h3>Platform Name</h3>
-          <p>WazirX</p>
+          <a href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn" target="_blank">
+          <p class="decoW">WazirX</p>
+          </a>
         </div>
         <div class="column">
           <h3>Last Trade Price</h3>
@@ -45,9 +47,12 @@ function showTicker(tickerName) {
           <h3>Saving</h3>
           <p>${saving}</p>
         </div>
+    
       `;
     })
     .catch((error) => {
       console.error(error);
     });
 }
+
+showTicker();

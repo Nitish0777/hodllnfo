@@ -30,19 +30,18 @@
 .dropbtn {
   background-color: #5b1a5b;
   color: white;
-  padding: 16px;
+  padding: 40px;
+  width: 50px;
   font-size: 16px;
   border: none;
   cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   cursor: grab;
@@ -53,7 +52,6 @@
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: white;
   padding: 12px 16px;
@@ -61,17 +59,14 @@
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
@@ -80,7 +75,8 @@
 /* Rows start --------------------------------------------------------*/
 .row {
   display: flex;
-  height: 25px;
+  height: 200px;
+  color: #f1f1f1;
 }
 
 .column {
@@ -100,3 +96,21 @@
 }
 
 /* Rows end --------------------------------------------------------*/
+
+.bigBtn {
+  font-size: medium;
+  padding: 10px;
+  color: white;
+  background-color: rgba(59, 62, 62, 0.479);
+  height: 50px;
+  border-radius: 25%;
+  border: 1px solid transparent;
+  width: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+.decoW {
+  color: white;
+}
