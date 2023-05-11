@@ -5,15 +5,30 @@ const getData = async (req, res) => {
   const dataName = req.params.dataName;
   try {
     console.log("dataName", dataName);
-    const data = await Field.find({ name: dataName });
-    if (data) {
-      console.log("data from controller", data);
-
-      res.render("index", {
-        data: data,
-      });
-    } else {
-      res.status(404).json({ message: "Crypto data not found" });
+    const cryptoData = [
+      "btcinr",
+      "ethinr",
+      "xrpinr",
+      "trxinr",
+      "zilinr",
+      "wrxinr",
+      "maticinr",
+      "dogeinr",
+      "ltcinr",
+      "batinr",
+    ];
+    for (let i = 0; i < cryptoData.length; i++) {
+      if (dataName === cryptoData[i]) {
+        const data = await Field.findOne({ key: cryptoData[i] });
+        if (data) {
+          console.log("data from controller", data);
+          res.render("index", {
+            data: data,
+          });
+        } else {
+          res.status(404).json({ message: "Crypto data not found" });
+        }
+      }
     }
   } catch (error) {
     console.error(error);

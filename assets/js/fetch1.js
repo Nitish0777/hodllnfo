@@ -1,8 +1,7 @@
 function showTicker(tickerName = "btcinr") {
-  // Make a request to fetch the ticker data based on the clicked button
-  console.log("Inside showTicker");
-  console.log(`https://api.wazirx.com/api/v2/tickers/${tickerName}`);
-  fetch(`https://api.wazirx.com/api/v2/tickers/${tickerName}`)
+  console.log("Inside showTicker --------------1");
+  console.log(`http://127.0.0.1:3000/api/tickers/:${tickerName}`);
+  fetch(`http://127.0.0.1:3000/api/tickers/:${tickerName}`)
     .then((response) => response.json())
     .then((data) => {
       console.log("data from js", data);
