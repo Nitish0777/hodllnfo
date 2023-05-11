@@ -18,42 +18,23 @@
         <div class="dropdown">
           <button class="dropbtn">crypto</button>
           <div class="dropdown-content">
-            <a>btc</a>
-            <a>xrp</a>
-            <a>eth</a>
-            <a>trx</a>
-            <a>eos</a>
-            <a>zil</a>
-            <a>bat</a>
-            <a>zrx</a>
-            <a>req</a>
-            <a>nuls</a>
+            <a onclick="showTicker('btc')">btc</a>
+            <a onclick="showTicker('xrp')">xrp</a>
+            <a onclick="showTicker('eth')">eth</a>
+            <a onclick="showTicker('trx')">trx</a>
+            <a onclick="showTicker('eos')">eos</a>
+            <a onclick="showTicker('zil')">zil</a>
+            <a onclick="showTicker('bat')">bat</a>
+            <a onclick="showTicker('zrx')">zrx</a>
+            <a onclick="showTicker('req')">req</a>
+            <a onclick="showTicker('nuls')">nuls</a>
           </div>
         </div>
+        <div class="row" id="tickerRow"></div>
         <button>BUY crypto</button>
       </div>
     </div>
-    <div class="row">
-      <div class="column">
-        <h3>Platform Name</h3>
-        <p>REQ/INR</p>
-      </div>
-      <div class="column">
-        <h3>Last Trade Price</h3>
-        <p>8.2599</p>
-      </div>
-      <div class="column">
-        <h3>Buy/Sell</h3>
-        <p>₹7.8318 <span style="font-weight: 300">/</span> ₹8.21</p>
-      </div>
-      <div class="column">
-        <h3>Difference</h3>
-        <p>Low: 7.83<br />High: 8.299</p>
-      </div>
-      <div class="column">
-        <h3>Saving</h3>
-        <p>Volume: 42.0</p>
-      </div>
-    </div>
+
+    <script src="/js/fetch.js"></script>
   </body>
 </html>
