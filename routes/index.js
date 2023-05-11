@@ -9,6 +9,6 @@ router.get("/", async (req, res) => {
   });
 });
 
-router.get("/api/tickers/:dataName");
+router.get("/api/tickers/:dataName", getData);
 
 export default router;

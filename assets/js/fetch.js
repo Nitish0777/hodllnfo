@@ -1,7 +1,8 @@
 function showTicker(tickerName) {
   // Make a request to fetch the ticker data based on the clicked button
   console.log("Inside showTicker");
-  fetch(`/api/tickers/${tickerName}`)
+  console.log(`https://api.wazirx.com/api/v2/tickers/${tickerName}`);
+  fetch(`https://api.wazirx.com/api/v2/tickers/${tickerName}`)
     .then((response) => response.json())
     .then((data) => {
       // Create the ticker row HTML dynamically

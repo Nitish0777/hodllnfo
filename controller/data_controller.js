@@ -3,7 +3,6 @@ import Field from "../models/fields.js";
 const getData = async (req, res) => {
   console.log("Inside getData");
   const dataName = req.params.dataName;
-
   try {
     const data = await Field.find({ name: dataName });
     if (data) {

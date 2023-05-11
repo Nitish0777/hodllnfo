@@ -40,8 +40,16 @@ const fieldSchema = new mongoose.Schema({
   name: {
     type: String,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
-const Field = mongoose.model("Field", fieldSchema);
+// fieldSchema.pre("save", function (next) {
+//   this.createdAt = Math.floor(this.createdAt.getTime() / 1000);
+//   next();
+// });
 
+const Field = mongoose.model("Field", fieldSchema);
 export default Field;
