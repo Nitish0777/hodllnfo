@@ -6,10 +6,10 @@ import db from "./config/mongoose.js";
 import Field from "./models/fields.js";
 import router from "./routes/index.js";
 
+app.use("/", router);
+
 app.set("view engine", "ejs");
 app.set("views", "./views");
-
-app.use("/", router);
 
 app.use(express.static("assets"));
 
