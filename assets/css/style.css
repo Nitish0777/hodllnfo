@@ -88,14 +88,29 @@
 
 .column h3 {
   margin: 0;
+  background-color: #5b1a5b;
 }
 
 .column p {
   margin: 5px 0 0;
   font-weight: bold;
+  background-color: #5b1a5b;
 }
 
 /* Rows end --------------------------------------------------------*/
+
+#tickerRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5b1a5b;
+  color: white;
+}
 
 .bigBtn {
   font-size: medium;
