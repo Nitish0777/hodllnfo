@@ -5,7 +5,11 @@ function showTicker(tickerName) {
   fetch(`https://api.wazirx.com/api/v2/tickers/${tickerName}`)
     .then((response) => response.json())
     .then((data) => {
-      // Create the ticker row HTML dynamically
+      const low = parseFloat(data.low);
+      const high = parseFloat(data.high);
+      const volume = parseFloat(data.volume);
+      const difference = high - low;
+      const saving = difference * volume;
       const tickerRow = document.getElementById("tickerRow");
       console.log("tickerRow", tickerRow);
       tickerRow.innerHTML = `
@@ -23,7 +27,7 @@ function showTicker(tickerName) {
         </div>
         <div class="column">
           <h3>Difference</h3>
-          <p>Low: ${data.low}<br>High: ${data.high}</p>
+          <p>Low: ${data.difference}</p>
         </div>
         <div class="column">
           <h3>Saving</h3>
